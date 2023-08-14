@@ -1,0 +1,9 @@
+# - buscar por ID     -  #username
+. - Buscar por classe -  .username
+buscar por atributo   -  [onclick="Modal.open()"] 
+
+
+Coringas
+* - contem o valor         - [onclick*=open]
+^ - começa com o valor     - [onclick^=Modal]
+$ - temina com o valor     - [onclick$='close()']	

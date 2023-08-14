@@ -1,23 +1,26 @@
 
-import  saucedemo  from "../Pages/saucedemo.js";
+import contactus from "../Pages/contactus.js";
 
-describe('Swag Labs', () => {
+
+describe('Webdriver Test', () => {
     beforeEach(() => {
-       cy.visit('https://www.saucedemo.com/') 
-       cy.title().should('eq', 'Swag Labs')
+       cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html') 
+       cy.title().should('eq', 'WebDriver | Contact Us')
+       
 
 
 });
  
-    it('Executando Login', () => {
+    it('Preenchendo Contato', () => {
 
-        saucedemo.loginUser()
-        saucedemo.loginPassword()
-        saucedemo.loginAcess()
-
-        cy.intercept('GET', 'https://www.saucedemo.com/inventory.html')
-        .as('login')
-        cy.wait('@login')
+        contactus.firstName()
+        contactus.lastName()
+        contactus.email()
+        contactus.comments()
+        contactus.submit()
+        
+        cy.title().should('eq', 'Gianni Bruno - Designer')
+      
     })
 
 })
